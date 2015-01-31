@@ -12,18 +12,7 @@
 		9BAC72A61A7D39F100DAA9E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAC72A41A7D39F100DAA9E7 /* Main.storyboard */; };
 		9BAC72A81A7D39F100DAA9E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAC72A71A7D39F100DAA9E7 /* Images.xcassets */; };
 		9BAC72AB1A7D39F100DAA9E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAC72A91A7D39F100DAA9E7 /* LaunchScreen.xib */; };
-		9BAC72B71A7D39F100DAA9E7 /* PopoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC72B61A7D39F100DAA9E7 /* PopoverTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9BAC72B11A7D39F100DAA9E7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BAC72931A7D39F100DAA9E7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9BAC729A1A7D39F100DAA9E7;
-			remoteInfo = Popover;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9BAC729B1A7D39F100DAA9E7 /* Popover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popover.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,20 +22,12 @@
 		9BAC72A51A7D39F100DAA9E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BAC72A71A7D39F100DAA9E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9BAC72AA1A7D39F100DAA9E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9BAC72B01A7D39F100DAA9E7 /* PopoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAC72B51A7D39F100DAA9E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BAC72B61A7D39F100DAA9E7 /* PopoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9BAC72981A7D39F100DAA9E7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BAC72AD1A7D39F100DAA9E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				9BAC729B1A7D39F100DAA9E7 /* Popover.app */,
-				9BAC72B01A7D39F100DAA9E7 /* PopoverTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,24 +112,6 @@
 			productReference = 9BAC729B1A7D39F100DAA9E7 /* Popover.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9BAC72AF1A7D39F100DAA9E7 /* PopoverTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9BAC72BD1A7D39F100DAA9E7 /* Build configuration list for PBXNativeTarget "PopoverTests" */;
-			buildPhases = (
-				9BAC72AC1A7D39F100DAA9E7 /* Sources */,
-				9BAC72AD1A7D39F100DAA9E7 /* Frameworks */,
-				9BAC72AE1A7D39F100DAA9E7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9BAC72B21A7D39F100DAA9E7 /* PBXTargetDependency */,
-			);
-			name = PopoverTests;
-			productName = PopoverTests;
-			productReference = 9BAC72B01A7D39F100DAA9E7 /* PopoverTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,10 +123,6 @@
 				TargetAttributes = {
 					9BAC729A1A7D39F100DAA9E7 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					9BAC72AF1A7D39F100DAA9E7 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 9BAC729A1A7D39F100DAA9E7;
 					};
 				};
 			};
@@ -182,7 +140,6 @@
 			projectRoot = "";
 			targets = (
 				9BAC729A1A7D39F100DAA9E7 /* Popover */,
-				9BAC72AF1A7D39F100DAA9E7 /* PopoverTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,13 +155,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BAC72AE1A7D39F100DAA9E7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -217,23 +167,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BAC72AC1A7D39F100DAA9E7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BAC72B71A7D39F100DAA9E7 /* PopoverTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9BAC72B21A7D39F100DAA9E7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9BAC729A1A7D39F100DAA9E7 /* Popover */;
-			targetProxy = 9BAC72B11A7D39F100DAA9E7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9BAC72A41A7D39F100DAA9E7 /* Main.storyboard */ = {
@@ -354,40 +288,6 @@
 			};
 			name = Release;
 		};
-		9BAC72BE1A7D39F100DAA9E7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PopoverTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Popover.app/Popover";
-			};
-			name = Debug;
-		};
-		9BAC72BF1A7D39F100DAA9E7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PopoverTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Popover.app/Popover";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -405,14 +305,6 @@
 			buildConfigurations = (
 				9BAC72BB1A7D39F100DAA9E7 /* Debug */,
 				9BAC72BC1A7D39F100DAA9E7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		9BAC72BD1A7D39F100DAA9E7 /* Build configuration list for PBXNativeTarget "PopoverTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9BAC72BE1A7D39F100DAA9E7 /* Debug */,
-				9BAC72BF1A7D39F100DAA9E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
