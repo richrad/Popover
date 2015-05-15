@@ -25,7 +25,9 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         if segue.identifier == "popoverSegue" {
             let popoverViewController = segue.destinationViewController as! UIViewController
             popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
-            popoverViewController.popoverPresentationController!.delegate = self
+			if IOSVersion.SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO("8.0") {
+				popoverViewController.popoverPresentationController!.delegate = self
+			}
         }
     }
     
