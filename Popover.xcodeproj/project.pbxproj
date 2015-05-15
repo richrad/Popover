@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D1E54CA1B05E634004765BD /* iOSVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1E54C91B05E634004765BD /* iOSVersion.swift */; };
+		6D1E54D01B05E850004765BD /* UIPopoverController+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1E54CF1B05E850004765BD /* UIPopoverController+iPhone.m */; };
 		9BAC72A11A7D39F100DAA9E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC72A01A7D39F100DAA9E7 /* AppDelegate.swift */; };
 		9BAC72A31A7D39F100DAA9E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC72A21A7D39F100DAA9E7 /* ViewController.swift */; };
 		9BAC72A61A7D39F100DAA9E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAC72A41A7D39F100DAA9E7 /* Main.storyboard */; };
@@ -15,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D1E54C91B05E634004765BD /* iOSVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSVersion.swift; sourceTree = "<group>"; };
+		6D1E54CD1B05E84F004765BD /* Popover-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Popover-Bridging-Header.h"; sourceTree = "<group>"; };
+		6D1E54CE1B05E850004765BD /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
+		6D1E54CF1B05E850004765BD /* UIPopoverController+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+iPhone.m"; sourceTree = "<group>"; };
 		9BAC729B1A7D39F100DAA9E7 /* Popover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAC729F1A7D39F100DAA9E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BAC72A01A7D39F100DAA9E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,10 @@
 			children = (
 				9BAC72A01A7D39F100DAA9E7 /* AppDelegate.swift */,
 				9BAC72A21A7D39F100DAA9E7 /* ViewController.swift */,
+				6D1E54C91B05E634004765BD /* iOSVersion.swift */,
+				6D1E54CE1B05E850004765BD /* UIPopoverController+iPhone.h */,
+				6D1E54CF1B05E850004765BD /* UIPopoverController+iPhone.m */,
+				6D1E54CD1B05E84F004765BD /* Popover-Bridging-Header.h */,
 				9BAC72A41A7D39F100DAA9E7 /* Main.storyboard */,
 				9BAC72A71A7D39F100DAA9E7 /* Images.xcassets */,
 				9BAC72A91A7D39F100DAA9E7 /* LaunchScreen.xib */,
@@ -163,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BAC72A31A7D39F100DAA9E7 /* ViewController.swift in Sources */,
+				6D1E54CA1B05E634004765BD /* iOSVersion.swift in Sources */,
+				6D1E54D01B05E850004765BD /* UIPopoverController+iPhone.m in Sources */,
 				9BAC72A11A7D39F100DAA9E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -260,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -272,9 +284,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Popover/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Popover/Popover-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -282,9 +297,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Popover/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Popover/Popover-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -307,6 +324,7 @@
 				9BAC72BC1A7D39F100DAA9E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
