@@ -23,7 +23,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "popoverSegue" {
-            let popoverViewController = segue.destinationViewController as UIViewController
+            let popoverViewController = segue.destinationViewController as! UIViewController
             popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
             popoverViewController.popoverPresentationController!.delegate = self
         }
