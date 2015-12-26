@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9m3-F1-13v">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Popover_Presentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HyL-vT-Lxx">
+                        <barButtonItem key="rightBarButtonItem" title="Pop It" id="mjF-hb-xPL">
+                            <connections>
+                                <segue destination="DnQ-my-e4S" kind="popoverPresentation" identifier="popoverSegue" popoverAnchorBarButtonItem="mjF-hb-xPL" id="xHw-hF-xEE">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="540"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="WkO-d2-rrp">
+            <objects>
+                <viewController id="DnQ-my-e4S" customClass="PopoverViewController" customModule="Popover_Presentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qL4-jR-s7m"/>
+                        <viewControllerLayoutGuide type="bottom" id="xGO-Mg-3in"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tLo-Ct-NEh">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="54"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbG-xc-tV6">
+                                <rect key="frame" x="36" y="12" width="79" height="30"/>
+                                <state key="normal" title="Dismiss Me"/>
+                                <connections>
+                                    <action selector="dismissButtonPressed:" destination="DnQ-my-e4S" eventType="touchUpInside" id="LGr-C6-PT2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HbG-xc-tV6" firstAttribute="centerX" secondItem="tLo-Ct-NEh" secondAttribute="centerX" id="D6g-xj-5Gl"/>
+                            <constraint firstItem="HbG-xc-tV6" firstAttribute="centerY" secondItem="tLo-Ct-NEh" secondAttribute="centerY" id="qd6-rk-CHc"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="150" height="54"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="150" height="54"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sta-hc-ROk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="186"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ag1-5S-k7S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9m3-F1-13v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g8H-3I-iXj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0F4-rl-Kq5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4s6-6h-9kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="540"/>
+        </scene>
+    </scenes>
+</document>

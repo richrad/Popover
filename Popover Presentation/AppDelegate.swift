@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Popover
+//  Popover Presentation
 //
-//  Created by Richard Allen on 1/31/15.
-//  Copyright (c) 2015 Lapdog. All rights reserved.
+//  Created by Richard Allen on 12/26/15.
+//  Copyright © 2015 SoftwareDad. All rights reserved.
 //
 
 import UIKit
