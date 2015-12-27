@@ -8,20 +8,28 @@
 
 import UIKit
 
+protocol PopupNavigationDelegate {
+    func popupSelectionMade(segue: String)
+}
+
 class PopoverViewController: UIViewController {
 
+    var popupNavigationDelegate: PopupNavigationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func dismissButtonPressed(sender: AnyObject?) {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func pushButtonPressed(sender: AnyObject?) {
+        self.popupNavigationDelegate?.popupSelectionMade(Segue.pushToSecondSegue.rawValue)
     }
 
 }

@@ -8,27 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+enum Segue: String {
+    case pushToSecondSegue
+    case popoverSegue
+}
+
+class ViewController: UIViewController, UIPopoverPresentationControllerDelegate, PopupNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "popoverSegue" {
+        if segue.identifier == Segue.popoverSegue.rawValue {
             segue.destinationViewController.modalPresentationStyle = .Popover
             segue.destinationViewController.popoverPresentationController?.delegate = self
+            (segue.destinationViewController as! PopoverViewController).popupNavigationDelegate = self
         }
     }
 
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return .None
+    }
+    
+    func popupSelectionMade(segue: String) {
+        if segue == Segue.pushToSecondSegue.rawValue {
+            self.presentedViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+                self.performSegueWithIdentifier(segue, sender: self)
+            })
+        }
     }
 }
 
