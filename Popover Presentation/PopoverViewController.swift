@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PopupNavigationDelegate {
-    func popupSelectionMade(segue: String)
+    func popupSelectionMade(_ segue: String)
 }
 
 class PopoverViewController: UIViewController {
@@ -24,11 +24,11 @@ class PopoverViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func dismissButtonPressed(sender: AnyObject?) {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func dismissButtonPressed(_ sender: AnyObject?) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func pushButtonPressed(sender: AnyObject?) {
+    @IBAction func pushButtonPressed(_ sender: AnyObject?) {
         self.popupNavigationDelegate?.popupSelectionMade(Segue.pushToSecondSegue.rawValue)
     }
 

@@ -23,22 +23,22 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         super.didReceiveMemoryWarning()
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.popoverSegue.rawValue {
-            segue.destinationViewController.modalPresentationStyle = .Popover
-            segue.destinationViewController.popoverPresentationController?.delegate = self
-            (segue.destinationViewController as! PopoverViewController).popupNavigationDelegate = self
+            segue.destination.modalPresentationStyle = .popover
+            segue.destination.popoverPresentationController?.delegate = self
+            (segue.destination as! PopoverViewController).popupNavigationDelegate = self
         }
     }
 
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
     
-    func popupSelectionMade(segue: String) {
+    func popupSelectionMade(_ segue: String) {
         if segue == Segue.pushToSecondSegue.rawValue {
-            self.presentedViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
-                self.performSegueWithIdentifier(segue, sender: self)
+            self.presentedViewController?.dismiss(animated: true, completion: { () -> Void in
+                self.performSegue(withIdentifier: segue, sender: self)
             })
         }
     }
